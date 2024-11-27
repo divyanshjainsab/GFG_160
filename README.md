@@ -20,8 +20,8 @@ The **GFG 160 Days of Coding Challenge** is designed to help programmers improve
 
 ### 🏁 Challenge Progress
 
-- **Start Date**: [Start Date]
-- **End Date**: [End Date]
+- **Start Date**: [25.11.2024]
+- **Expected End Date**: [25.04.2025]
 - **Total Problems Solved**: 160
 
 ## 📝 Contents of this Repository
