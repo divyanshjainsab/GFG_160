@@ -35,9 +35,10 @@ function rotateArray(arr, d) {
 // Best-2
 function rotateArray(arr, d) {
   const n = arr.length;
-  reverse(arr, 0, n - 1);
-  reverse(arr, 0, n - d - 1);
+  d = d%n; // to avoid extra rotations
+  reverse(arr, 0, d-1);
   reverse(arr, d, n - 1);
+  reverse(arr, 0, n - 1);
   return arr;
 }
 function reverse(arr, start, end) {
@@ -49,4 +50,4 @@ function reverse(arr, start, end) {
 }
 // This algo takes T.C. O(n) and S.C. O(1)
 
-console.log(rotateArray([1, 2, 3, 4, 5, 6], 2));
+console.log(rotateArray([1, 2, 3, 4, 5,6], 2));
