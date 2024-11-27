@@ -21,27 +21,32 @@ function rotateArray(arr, d) {
   for (let i = 0; i < d; i++) newArr.push(arr[i]);
   return arr;
 }
+// takes T.C as O(n) and same as Space C. as we aren't mutating then orginal one that takes space
 
 // ChatGpt approach
 function rotateArray(arr, d) {
   return arr.slice(d).concat(arr.slice(0, d));
 }
-// takes T.C as O(n) and same as Space C. as we aren't mutating then orginal one that takes space 
+// takes T.C as O(n) and same as Space C. as we aren't mutating then orginal one that takes space
 
-// Optimal one
-function rotateArray(arr,d){
+// Best-1 Using Juggling algorthim
+// Juggling algo but unable to understand that properly
+
+// Best-2
+function rotateArray(arr, d) {
   const n = arr.length;
-  reverse(arr,0 , n-1);
-  reverse(arr, 0, n-d-1);
-  reverse(arr, d , n-1);
+  reverse(arr, 0, n - 1);
+  reverse(arr, 0, n - d - 1);
+  reverse(arr, d, n - 1);
   return arr;
 }
-function reverse(arr,start,end){
-  while (start< end) {[arr[start], arr[end]] = [arr[end],arr[start]];
+function reverse(arr, start, end) {
+  while (start < end) {
+    [arr[start], arr[end]] = [arr[end], arr[start]];
     start++;
     end--;
   }
 }
-
+// This algo takes T.C. O(n) and S.C. O(1)
 
 console.log(rotateArray([1, 2, 3, 4, 5, 6], 2));
