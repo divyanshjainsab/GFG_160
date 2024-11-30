@@ -43,5 +43,6 @@ function splitArray(arr) {
   }
   return [-1, -1];
 }
+// as we are iterating over array once to get sum then second time to get breakpoints so Time Complexity will be O(2n) -> O(n) and we are using at max 2 extra space to store indices so Space Complexity will be O(2) -> O(1) // as this is also constant
 
-console.log(splitArray([1, 3, 4, 0, 4]));
+// Date Added 30/11/24
